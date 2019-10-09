@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2019.1 (Build 510_4U)" ts="2019-10-09 12:36:16">
+<Document name="Analytics-SLA Dashboard.dashboard.DFI">
+<dashboard xmlns="http://www.intersystems.com/deepsee/library" name="SLA Dashboard" folderName="Analytics" title="Service Level Agreement - Processing Dashboard" description="" keywords="" owner="" shared="true" public="true" locked="false" resource="" timeCreated="2019-09-04T09:34:21.626Z" createdBy="rpaiva" category="" bookCover="{background: {style:&apos;background:white;&apos;,src:&apos;covers/11515329_s.jpg&apos;},header: {text:&apos;$type&apos;},title: {text:&apos;$title&apos;},image: {imageStyle:&apos;width:64px;height:64px;&apos;},footer: {text:&apos;$owner&apos;}}" scheme="" worklistCount="2" snapTo="true" snapGrid="true" gridRows="10" gridCols="10" canResize="true" canModify="true" showTitleBar="true" titleBarOpacity="" titleBarColor="" selectedTitleBarOpacity="" selectedTitleBarColor="" titleBarTextColor="" selectedTitleBarTextColor="" titleBarFont="" companyName="" companyLogo="" companyStyle="" backgroundColor="white" backgroundImage="none" backgroundRepeat="no-repeat" backgroundSize="100% 100%" backgroundOpacity="1" widgetBorders="1px solid #F0F0F0" widgetBordersSwitch="edit" widgetBordersColor="#F0F0F0" widgetBordersStyle="solid" widgetBordersWidth="1" widgetBordersToggle="true">
+  <widget name="AvgTimesByPatientClass" type="pivot" subtype="barChartStacked" subtypeClass="barChart" title="Average Processing Time by Patient Class - Order to Result (minutes)" dataSource="Analytics/SLAbyPatientClass(MeanGateTimes.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="0" colSpanL="6" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+    <control name="" action="applyFilter" target="*" targetProperty="[ActualRequestDT].[H1].[Year]" location="dashboard" type="auto" controlClass="" label="Year" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <valueRequired>false</valueRequired>
+    </control>
+    <control name="" action="applyFilter" target="*" targetProperty="[ActualRequestDT].[H1].[Month]" location="dashboard" type="auto" controlClass="" label="Month" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <valueRequired>false</valueRequired>
+    </control>
+    <control name="" action="applyFilter" target="*" targetProperty="[ActualRequestDT].[H1].[Day]" location="dashboard" type="auto" controlClass="" label="Day" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <valueRequired>false</valueRequired>
+    </control>
+    <dataProperty name="" label="SLA" width="" align="" subtype="" style="" display="" format="" showAs="" valueColumn="true" summary="" summaryValue="" dataValue="SLA" targetValue="" thresholdLower="" thresholdUpper="" rangeLower="" rangeUpper="" baseValue="" override=""></dataProperty>
+    <property name="legendPos">bottom</property>
+    <override name="barChart">{appearance:'3D',axisTitleStyle:'opacity:0;',legendVisible:'false',valueLabelStyle:'fill:rgb(15,39,64);stroke:rgb(15,39,64);font-size:12px;',valueLabelsVisible:true,xAxis:{_type:'axis'},yAxisList:[{_type:'axis'}],chartPivot:true,chartStacked:true,_type:'barChart'}</override>
+    <override name="legend">{legendLabels:'From Order Request to Laboratory,Laboratory Time to Result',legendPosition:'right',legendStyle:'color:rgb(15, 39, 64);font-size:12px;height:45px;',orientation:'horizontal',_type:'chartLegend'}</override>
+  </widget>
+  <widget name="AVGTimeByLabGroup" type="pivot" subtype="barChart" subtypeClass="barChart" title="Average Processing Time by Order Group - Order to Result (minutes)" dataSource="Analytics/AvgTimeByLabGroup.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="4" homeColL="0" colSpanL="6" rowSpanL="6" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+    <property name="legendPos">bottom</property>
+    <override name="barChart">{axisTitleStyle:'opacity:0;',legendVisible:'false',maxLabelLen:43,valueBoxStyle:'stroke-width:0;',xAxis:{_type:'axis'},yAxisList:[{_type:'axis'}],chartPivot:true,chartStacked:true,_type:'barChart'}</override>
+    <override name="legend">{legendLabels:'From Order Request to Laboratory,Laboratory Time to Result',legendPosition:'right',legendStyle:'font-size:12px;height:45px;',orientation:'horizontal',_type:'chartLegend'}</override>
+  </widget>
+  <widget name="MinMaxTime" type="meter" subtype="textMeter" subtypeClass="" title="Average Processing Time - (minutes)" dataSource="Analytics/MinMaxAVGTime.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="0" homeColL="6" colSpanL="4" rowSpanL="1" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+    <dataProperty name="" label="$auto" width="" align="" subtype="textMeter" style="" display="value" format="" showAs="value" valueColumn="false" summary="" summaryValue="" dataValue="Min." targetValue="" thresholdLower="" thresholdUpper="" rangeLower="" rangeUpper="" baseValue="" override="{height:60,width:242,dataBinding:&apos;Min Lab Time&apos;,value:&apos;Min Lab Time&apos;,format:&apos;#,#&apos;,_type:&apos;textMeter&apos;}"></dataProperty>
+    <dataProperty name="" label="$auto" width="" align="" subtype="textMeter" style="" display="value" format="" showAs="value" valueColumn="false" summary="" summaryValue="" dataValue="Average" targetValue="" thresholdLower="" thresholdUpper="" rangeLower="" rangeUpper="" baseValue="" override="{height:60,width:242,x:242,dataBinding:&apos;Average Lab Time&apos;,value:&apos;Average Lab Time&apos;,format:&apos;#,#&apos;,_type:&apos;textMeter&apos;}"></dataProperty>
+    <dataProperty name="" label="$auto" width="" align="" subtype="textMeter" style="" display="value" format="" showAs="value" valueColumn="false" summary="" summaryValue="" dataValue="Max." targetValue="" thresholdLower="" thresholdUpper="" rangeLower="" rangeUpper="" baseValue="" override="{height:&apos;60&apos;,width:&apos;242&apos;,x:&apos;484&apos;,dataBinding:&apos;Max Lab Time&apos;,value:&apos;Max Lab Time&apos;,format:&apos;#,#&apos;,_type:&apos;textMeter&apos;}"></dataProperty>
+    <property name="format">#,#</property>
+    <property name="opacity">1</property>
+  </widget>
+  <widget name="AVGByReqLoc" type="pivot" subtype="pivot" subtypeClass="lineChart" title="#Orders and Average Processing Time by Requesting Location" dataSource="Analytics/AvgTimeByRequestingLocation.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="1" homeColL="6" colSpanL="4" rowSpanL="9" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="" opacity=".54" theme="" dataColorList="">
+    <property name="analyzer">1</property>
+    <property name="drillDown">1</property>
+    <property name="excel">1</property>
+    <override name="pivot">{drillRowNumbers:[],hiddenMeasureText:[],rowCaptionList:['RequestLocation'],showZebra:true,_type:'pivotTable'}</override>
+  </widget>
+</dashboard>
+</Document></Export>

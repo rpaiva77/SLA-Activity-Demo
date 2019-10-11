@@ -1,0 +1,8 @@
+version: '2.4'
+services:
+  iris:
+    build: .
+    restart: always
+    ports:
+      - 52773:52773
+      - 55002:55002

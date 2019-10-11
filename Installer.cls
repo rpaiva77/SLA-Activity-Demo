@@ -17,7 +17,7 @@ XData MyInstall [ XMLNamespace = INSTALLER ]
     </Configuration>
 
   <CSPApplication Url="/csp/${NAMESPACE}" Directory="${SOURCESPATH}${NAMESPACE}" AuthenticationMethods="64" IsNamespaceDefault="true" />
-    <Import File="${SOURCESPATH}" Recurse="1"/>
+  <Import File="${SOURCESPATH}" Recurse="1"/>
   </Namespace>
 
 </Manifest>

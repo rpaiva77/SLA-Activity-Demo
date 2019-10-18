@@ -2,7 +2,7 @@
 Service level agreement and activity monitoring demo using InterSystems IRIS (for Health)
 Purpose:
 This is a business oriented demo. It is not a complete business solution. It's a simple demonstration of how you can use InterSystems IRIS for Health to derive/generate business value from your data. 
-Althought it is based on hl7 messaging, it should be revised. Like any other analytics work, this is strongly coppled to the data. We are not providing any data set. It's up to the user to tune any component and adjust it to the used data set.
+Althought it is based on hl7 messaging, it should be revised. Like any other analytics work, this is strongly couppled to the data. We are not providing any data set. It's up to the user to tune any component and adjust it to the used data set.
 
 Generic behavior:
 This work is intended to monitor activity and control predefined service level agreement. It's done in such a away that allows time and volume control in any hl7 order-result flow. 
@@ -14,3 +14,4 @@ Here are few conserns/actions you should consider:
     3) You'll need to enter your SLA into the proper table (Analytics.SLA).
     4) Open and Start FoundationProduction (Interoperability > Production Configuration  - BUSINESSPKG.FoundationProduction).
     5) Your integration flow should route its messages to port 55002.
+You are ready to start using this demo.

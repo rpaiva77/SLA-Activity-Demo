@@ -5,7 +5,7 @@ Class User.Orders Extends %DeepSee.CubeDefinition [ DependsOn = Analytics.Order,
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="Orders" displayName="Orders" disabled="false" abstract="false" sourceClass="Analytics.Order" buildRestriction="UniversalServiceDesc is not null and ((InProgress=1 and Completed=1) or canceled=1)" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="Orders" displayName="Orders" disabled="false" abstract="false" sourceClass="Analytics.Order" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
   <dimension name="RequestDT" displayName="Request Time" disabled="false" hasAll="false" allCaption="All OrderRequestDateTime" allDisplayName="OrderRequestDateTime" sourceProperty="OrderRequestDateTime" type="time" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="Year" displayName="Year" disabled="false" factName="DxReqDTY" timeFunction="Year" list="false" useDisplayValue="true" useAsFilter="true" hidden="false">
@@ -224,4 +224,3 @@ ClassMethod GetSLATarget(labTestGroupCode As %String, patientClass As %String, p
 Parameter DOMAIN;
 
 }
-

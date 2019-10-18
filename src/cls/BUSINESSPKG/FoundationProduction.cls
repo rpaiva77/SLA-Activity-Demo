@@ -24,7 +24,7 @@ XData ProductionDefinition
   <Item Name="IN_LAB_Orders_File" Category="" ClassName="EnsLib.HL7.Service.FileService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
     <Setting Target="Host" Name="MessageSchemaCategory">2.4</Setting>
     <Setting Target="Host" Name="TargetConfigNames">IN_LAB_Orders_Router</Setting>
-    <Setting Target="Adapter" Name="FilePath">C:\tmp\Practice\hl7_test_analytics\from_apollo\</Setting>
+    <Setting Target="Adapter" Name="FilePath">c:\tmp\...\</Setting>
     <Setting Target="Adapter" Name="ArchivePath"></Setting>
     <Setting Target="Adapter" Name="FileSpec">*</Setting>
   </Item>
@@ -32,4 +32,3 @@ XData ProductionDefinition
 }
 
 }
-
